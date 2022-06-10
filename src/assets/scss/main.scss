@@ -1,0 +1,112 @@
+@import 'vendor/reset';
+
+$bg-color: #0d1117;
+$task-color: #212935;
+$border-color: #373b5e;
+$text-color: #ffffff;
+$primary-color: #7b61ff;
+$success-color: #00cbda;
+$warning-color: #fbbc04;
+$danger-color: #f95d8f;
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1rem;
+	background-color: $bg-color;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.todo {
+	min-width: 600px;
+	border-radius: 10px;
+	height: 500px;
+}
+
+.todo-title {
+	padding: 1rem;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.todo-title h3 {
+	color: $text-color;
+	font-size: 1.5rem;
+}
+
+.todo-form {
+	display: grid;
+	grid-template-columns: 1fr 110px;
+	grid-gap: 2rem;
+	width: 100%;
+	margin-bottom: 2rem;
+}
+
+.todo-form input {
+	padding: 1rem;
+	border-radius: 5px;
+	background-color: transparent;
+	border: 1px solid $border-color;
+	font-size: 1rem;
+	color: $text-color;
+	outline: none;
+}
+
+.todo-form input::placeholder {
+	color: $border-color;
+}
+
+.todo-form button {
+	background-color: $primary-color;
+	color: $text-color;
+	border-radius: 5px;
+	font-size: 1rem;
+	outline: none;
+	cursor: pointer;
+}
+
+.todo-item {
+	background-color: $task-color;
+	border-radius: 5px;
+	width: 100%;
+	padding: 1rem 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 1rem;
+	cursor: pointer;
+}
+
+.todo-item.is-completed {
+	opacity: 0.5;
+}
+
+.todo-item p {
+	color: $text-color;
+}
+
+.todo-item.is-completed p {
+	text-decoration: line-through;
+}
+
+.todo-mark {
+	color: $success-color;
+	font-size: 1.3rem;
+	margin-right: 1rem;
+	cursor: pointer;
+}
+
+.todo-edit {
+	color: $warning-color;
+	font-size: 1.3rem;
+	margin-right: 1rem;
+	cursor: pointer;
+}
+
+.todo-delete {
+	color: $danger-color;
+	font-size: 1.3rem;
+	cursor: pointer;
+}
